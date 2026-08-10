@@ -3,6 +3,28 @@ menuconfig LIBCXXABI
     default n
 
 if LIBCXXABI
+
+choice
+	prompt "Version"
+	default LIBCXXABI_RELEASE2118
+	help
+		Select the version of the upstream libcxxabi
+		sources that will be downloaded.
+		Please note that you should run `make properclean`
+		whenever you change the version.
+
+config LIBCXXABI_RELEASE1406
+	bool "Release 14.0.6"
+	help
+		An official release from the LLVM project.
+
+config LIBCXXABI_RELEASE2118
+	bool "Release 21.1.8"
+	help
+		An official release from the LLVM project.
+
+endchoice
+
     config LIBCXXABI_THREADS
     bool "Enable threads support"
 endif
