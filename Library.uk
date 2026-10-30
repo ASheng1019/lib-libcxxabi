@@ -3,3 +3,4 @@ description := "An LLVM project which provides a new implementation of low level
 homepage    := "https://libcxxabi.llvm.org/"
 version     := 14.0.6 sha256:82fbe9033da986f6ff3092a9df31049b4b19cbe59a46c6ab54e0523b31550794 https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.6/libcxxabi-14.0.6.src.tar.xz
 license     := "MIT"
+version     += 21.1.8 sha256:709c9a63bde1e36a80d8675becc38073b85f0fa1b4111e34542b885c9e1239da https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/libcxxabi-21.1.8.src.tar.xz

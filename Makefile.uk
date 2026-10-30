@@ -54,6 +54,11 @@ LIBCXXABI_VERSION=14.0.6
 endif
 LIBCXXABI_URL=https://github.com/llvm/llvm-project/releases/download/llvmorg-$(LIBCXXABI_VERSION)/libcxxabi-$(LIBCXXABI_VERSION).src.tar.xz
 LIBCXXABI_PATCHDIR=$(LIBCXXABI_BASE)/patches/$(LIBCXXABI_VERSION)
+ifeq ($(LIBCXXABI_VERSION),21.1.8)
+LIBCXXABI_ORIGIN_SHA256 := 709c9a63bde1e36a80d8675becc38073b85f0fa1b4111e34542b885c9e1239da
+else
+LIBCXXABI_ORIGIN_SHA256 := 82fbe9033da986f6ff3092a9df31049b4b19cbe59a46c6ab54e0523b31550794
+endif
 $(eval $(call fetch,libcxxabi,$(LIBCXXABI_URL)))
 $(eval $(call patch,libcxxabi,$(LIBCXXABI_PATCHDIR),libcxxabi-$(LIBCXXABI_VERSION).src))
 
